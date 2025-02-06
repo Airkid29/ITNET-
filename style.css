@@ -1,0 +1,36 @@
+/* Styles globaux */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    background: url('../img/university-campus.jpg') no-repeat center center/cover;
+}
+
+/* Services */
+.bi {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Évite le décalage */
+}
+.container-my-5{
+    margin-left: 40px;
+}
+.row-text-center{
+    display: flex;
+}
+ 
+.row-text-center img{
+    width: 300px;
+}
+.col-md-4 h3{
+    padding-left: 40px;
+}
+.carousel-inner .carousel-item img{
+    padding-top: 400px;
+}

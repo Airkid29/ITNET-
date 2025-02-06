@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITNET - Accueil</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">ITNET</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="programmes.html">Programmes</a></li>
+                <li class="nav-item"><a class="nav-link" href="actualites.html">Actualités</a></li>
+                <!--<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>-->
+                <li class="nav-item"><a class="nav-link" href="signin.html">Inscriptions</a></li>
+            <!-- Bouton Profil ou Connexion -->
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" id="profileMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                Mon Compte
+            </button>
+            <ul class="dropdown-menu" id="dropdownMenu">
+                <li><a class="dropdown-item d-none" href="profil.html" id="btnProfil">Profil</a></li>
+                <li><a class="dropdown-item" href="login.html" id="btnLogin">Se connecter</a></li>
+            </ul>
+        </div>
+
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <header class="hero d-flex align-items-center" style="padding-top: 200px;">
+        <div class="container text-center">
+            <h1 class="display-4 text-white">Bienvenue à ITNET</h1>
+            <p class="lead text-white">Un enseignement d'excellence pour façonner votre avenir</p>
+            <a href="signin.html" class="btn btn-primary btn-lg">S'inscrire maintenant</a>
+        
+        </div>
+    </header>
+
+    <!--CAROUSSEL-->
+    <div id="carouselExampleIndicators" class="carousel slide my-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="ASSETS/BTS à distance ou en présentiel _ lequel choisir _.jpeg" class="d-block w-100" alt="Slide 1" style="height: 500px;">
+                
+            </div>
+            <div class="carousel-item">
+                <img src="ASSETS/Montpellier parmi les meilleures universités mondiales selon le classement de Shanghai 2023 !.jpeg" class="d-block w-100" alt="Slide 2">
+                
+            </div>
+            <div class="carousel-item">
+                <img src="ASSETS/Montpellier parmi les meilleures universités mondiales selon le classement de Shanghai 2023 !.jpeg" class="d-block w-100" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Services -->
+    <!--<section class="container-my-5">
+        <div class="row-text-center">
+            <div class="col-md-4">
+                <i class="bi bi-book fs-1"></i>
+                <h3>Programmes variés</h3>
+                <p>Des formations adaptées à chaque étudiant.</p>
+                <img src="ASSETS/BTS à distance ou en présentiel _ lequel choisir _.jpeg" alt="">
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-calendar-event fs-1"></i>
+                <h3>Actualités</h3>
+                <p>Restez informé sur les événements de l'université.</p>
+                <img src="ASSETS/BTS à distance ou en présentiel _ lequel choisir _.jpeg" alt="">
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-people fs-1"></i>
+                <h3>Inscriptions faciles</h3>
+                <p>Rejoignez notre communauté en quelques clics.</p>
+                <img src="ASSETS/BTS à distance ou en présentiel _ lequel choisir _.jpeg" alt="">
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 ITNET - Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+       //REDIRIGE VERS LOGIN S'IL N'EST PAS CONNECTER
+        document.addEventListener("DOMContentLoaded", function () {
+    // Vérifie si l'utilisateur est connecté (exemple : via localStorage)
+    let user = localStorage.getItem("user");
+
+    if (user) {
+        document.getElementById("btnProfil").classList.remove("d-none");
+        document.getElementById("btnLogin").classList.add("d-none");
+    }
+});//FIN
+
+    //AFFICHAGE PROFIL, SE CONNECTER
+    document.addEventListener("DOMContentLoaded", function () {
+    let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+    if (loggedInUser) {
+        document.getElemen789tById("btnProfil").classList.remove("d-none"); // Afficher le bouton Profil
+        document.getElementById("btnLogin").classList.remove("d-none"); // Cacher le bouton Se connecter
+    }
+});
+    //FIN
+
+    </script>
+</body>
+</html>

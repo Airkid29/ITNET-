@@ -1,0 +1,7 @@
+/* Centrer le formulaire de connexion */
+.vh-100 {
+    height: 100vh;
+}
+.card {
+    border-radius: 10px;
+}
